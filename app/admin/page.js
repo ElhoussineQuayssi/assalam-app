@@ -1,3 +1,4 @@
+"use client";
 // pages/admin.js
 import { useState } from 'react';
 
