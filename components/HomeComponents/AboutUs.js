@@ -4,7 +4,7 @@ import ListItem from '../ListItem'
 
 const AboutUs = () => {
   return (
-    <div className='w-full h-screen justify-center items-center flex flex-row gap-4 p-28 relative top-[-150px]'>
+    <div className=" bg-[url('/bg1.jpg')] border-black bg-red-600 w-full h-fit justify-center items-center flex flex-col-reverse md:flex-row gap-8 p-5 md:p-28 relative top-[-150px]">
       <div className='flex-1 gap-4 flex flex-col'>
         <div className='text-3xl font-bold'>
           ABOUT US
@@ -14,17 +14,19 @@ const AboutUs = () => {
         </div>
         <div className='flex flex-col gap-2'>
           {
-            ListAboutUs.map((item,index) => {
-              return(
-                <ListItem text={item} key={index}/>
+            ListAboutUs.map((item, index) => {
+              return (
+                <ListItem text={item} key={index} />
               )
             }
             )
           }
         </div>
       </div>
-      <div className='flex-1 bg-green-500'></div>
-    </div>
+      <div className='flex-1 w-full h-80 flex justify-center items-center'>
+        <iframe  className='aspect-square w-full h-full rounded-tl-3xl rounded-br-3xl' src='https://www.youtube.com/embed/KrWPaJ-VjFo' title='YouTube video player' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowFullScreen></iframe>
+      </div>
+    </div >
   )
 }
 

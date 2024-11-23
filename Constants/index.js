@@ -123,12 +123,26 @@ export const ActualitesData = [
   }
 ]
 
-export BarData = [
+export const BarData = [
   {
     id: 1,
     label: 'Actualités',
-    icon: <MdPeopleAlt className='text-4xl' />,
+    icon: <MdPeopleAlt/>,
     text: 'fondation'
-  },
+  },{
+    id: 2,
+    label: 'Projets',
+    icon: <FiShare2/>,
+    text: 'fondation'
+  },{
+    id: 3,
+    label: 'Contact',
+    icon: <RiCommunityLine/>,
+    text: 'fondation'
+  },{
+    id: 4,
+    label: 'FAQ',
+    icon: <FaTools  />,
+    text: 'fondation'
   }
 ]

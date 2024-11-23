@@ -4,10 +4,10 @@ import { ActualitesData } from '@/Constants'
 
 const Actualites = () => {
   return (
-    <div className='relative flex gap-6 flex-col items-center justify-center h-fit top-[-150px] mt-3 w-5/6 mx-auto'>
-      <h1>Titre</h1>
-      <h3>Description</h3>
-      <div className='grid grid-cols-3 gap-4'>
+    <div className='relative flex gap-6 flex-col items-center justify-center h-fit top-[-100px] mt-3 w-5/6 mx-auto'>
+      <h1 className='text-xl'>Titre</h1>
+      <h3 className='text-3xl'>Description</h3>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         {ActualitesData.slice(0,6).map(
           (item,index) => {
             return (

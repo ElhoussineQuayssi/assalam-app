@@ -1,3 +1,6 @@
+import Image from "next/image";
+import logo from "./Assets/logo.png";
+
 // components/Footer.js
 const Footer = () => (
   <footer className="footer bg-base-200 text-base-content p-10">

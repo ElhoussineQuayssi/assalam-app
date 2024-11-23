@@ -1,8 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
+import logo from "./Assets/logo.png"
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 h-32">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,42 +24,40 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Accueil</a></li>
-            <li><a>Nous Sommes</a></li>
+            <li><a>Nous sommes</a></li>
+            <li><a>Actualités</a></li>
             <li>
               <a>Projets</a>
               <ul className="p-2">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
+                <li><a>Submenu 3</a></li>
               </ul>
             </li>
-            <li><a>actualités</a></li>
-            <li><a>contact</a></li>
-            <li><a>donate</a></li>
+            <li><a>Contact</a></li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Fondation <sub>Assalam</sub></a>
+        <a className="ml-5 text-xl "><Image src={logo} alt="Fondation Assalam" width={100} height={50}/></a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><a>Accueil</a></li>
-          <li><a>Nous Sommes</a></li>
+        <ul className="menu menu-horizontal px-1 text-lg">
+          <li><a className=''>Nous sommes</a></li>
+          <li><a>Actualités</a></li>
           <li>
             <details>
               <summary>Projets</summary>
-              <ul className="p-2">
+              <ul className="p-2 z-10">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
+                <li><a>Submenu 3</a></li>
               </ul>
             </details>
           </li>
-          <li><a>actualités</a></li>
-          <li><a>contact</a></li>
-          <li><a>donate</a></li>
+          <li><a>Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Donate</a>
       </div>
     </div>
   )

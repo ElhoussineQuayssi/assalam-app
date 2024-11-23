@@ -1,10 +1,24 @@
+import { BarData } from '@/Constants'
 import React from 'react'
 
 const Bar = () => {
   return (
-    <div className='w-full h-80 flex justify-center items-center bg-red-500'>
-      <div className='w-5/6 h-2/3 bg-blue-800 flex flex-row justify-around items-center'>
-        
+    <div className='w-full bg-[url("/bg2.jpg")]  gap-y-3 h-fit md:h-48 flex justify-center items-center'>
+      <div className='w-full h-2/3  grid grid-cols-2 md:grid-cols-4'>
+        {BarData.map(
+          (item,index) => {
+            return(
+              <div className='flex p-2 flex-col justify-center items-center' key={index}>
+                <div className='flex-1 flex justify-center items-center text-5xl'>
+                  {item.icon}
+                </div>
+                <div className='flex-1 flex justify-center items-center flex-col text-2xl'>
+                  <p>{item.label}</p>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            )
+          })}
       </div>
     </div>
   )
