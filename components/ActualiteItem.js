@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-const ActualiteItem = ({title, description, image}) => {
+const ActualiteItem = ({title, description, image,key}) => {
   return (
-    <div className='bg-slate-200 gap-3 rounded-lg p-4 shadow-md flex flex-col justify-center items-center hover:transition-all duration-700 hover:-translate-y-2'>
+    <div className={`bg-slate-200 gap-3 rounded-lg p-4 shadow-md flex flex-col justify-center items-center hover:transition-all duration-700 hover:-translate-y-2`}>
       <div className='flex-1'>
         <Image src={image} alt='image' width={400} height={400}/>
       </div>

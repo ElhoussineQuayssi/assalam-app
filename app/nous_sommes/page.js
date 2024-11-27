@@ -5,10 +5,11 @@ import Footer from '../../components/Footer';
 const NousSommes = () => {
   return (
     <>
-      <main className="p-8">
-        <h1 className="text-3xl font-bold mb-4">Nous Sommes</h1>
-        <p>Description about the foundation.</p>
-      </main>
+      <Navbar />
+      <div className='text-center text-5xl mt-4'>
+        Nous sommes
+      </div>
+      <Footer />
     </>
   );
 };

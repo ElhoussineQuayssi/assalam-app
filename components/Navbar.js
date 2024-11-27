@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import logo from "./Assets/logo.png"
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 h-32">
+    <div className="navbar bg-base-100 h-32 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,41 +25,39 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Nous sommes</a></li>
-            <li><a>Actualités</a></li>
+            <li><Link href="/nous_sommes">Nous sommes</Link></li>
+            <li><Link href='/actualites'>Actualités</Link></li>
             <li>
-              <a>Projets</a>
+              <Link href='/projects'>Projets</Link>
               <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-                <li><a>Submenu 3</a></li>
+                <li><Link href='/project/1'>Submenu 1</Link></li>
+                <li><Link href='/project/2'>Submenu 2</Link></li>
+                <li><Link href='/project/3'>Submenu 3</Link></li>
               </ul>
             </li>
-            <li><a>Contact</a></li>
+            <li><Link href='/contact'>Contact</Link></li>
           </ul>
         </div>
-        <a className="ml-5 text-xl "><Image src={logo} alt="Fondation Assalam" width={100} height={50}/></a>
+        <Link href='/' className="ml-5 text-xl "><Image src={logo} alt="Fondation Assalam" width={100} height={50}/></Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg">
-          <li><a className=''>Nous sommes</a></li>
-          <li><a>Actualités</a></li>
+          <li><Link href='/nous_sommes'>Nous sommes</Link></li>
+          <li><Link href="/actualites">Actualités</Link></li>
           <li>
             <details>
-              <summary>Projets</summary>
+              <summary><Link href='/projects'>Projects</Link></summary>
               <ul className="p-2 z-10">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-                <li><a>Submenu 3</a></li>
+                <li><Link href='/projects/1'>Submenu 1</Link></li>
+                <li><Link href='/projects/2'>Submenu 2</Link></li>
+                <li><Link href='/projects/3'>Submenu 3</Link></li>
               </ul>
             </details>
           </li>
-          <li><a>Contact</a></li>
+          <li><Link href='/contact'>Contact</Link></li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Donate</a>
-      </div>
+      
     </div>
   )
 }

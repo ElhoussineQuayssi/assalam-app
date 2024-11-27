@@ -1,50 +1,23 @@
-"use client";
-// pages/admin.js
-import { useState } from 'react';
+import React from 'react'
 
-const Admin = () => {
-  const [news, setNews] = useState([]);
-  const [projects, setProjects] = useState([]);
-
-  const handleAddNews = () => {
-    // Add news logic
-  };
-
-  const handleUpdateNews = (id) => {
-    // Update news logic
-  };
-
-  const handleDeleteNews = (id) => {
-    // Delete news logic
-  };
-
+const page = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Admin Panel</h1>
-      
-      {/* Add New News Section */}
-      <section>
-        <h2 className="text-2xl mb-2">Manage News</h2>
-        <button onClick={handleAddNews} className="bg-blue-500 text-white p-2 rounded">
-          Add News
-        </button>
-        <div>
-          {news.map((item) => (
-            <div key={item.id} className="flex justify-between p-2 border">
-              <span>{item.title}</span>
-              <div>
-                <button onClick={() => handleUpdateNews(item.id)}>Edit</button>
-                <button onClick={() => handleDeleteNews(item.id)}>Delete</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div className="drawer">
+  <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content">
+    {/* Page content here */}
+    <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
+  </div>
+  <div className="drawer-side">
+    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      {/* Sidebar content here */}
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  </div>
+</div>
+  )
+}
 
-      {/* Projects Section */}
-      {/* Repeat similar layout and logic for projects */}
-    </div>
-  );
-};
-
-export default Admin;
+export default page
