@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from './Assets/logo.png'
+import logo from '../Assets/logo.png'
 import Link from "next/link"
 import { IoLogoFacebook ,IoLogoInstagram ,IoLogoTwitter ,IoLogoYoutube } from "react-icons/io";
 
@@ -10,8 +10,8 @@ function Footer(){
             <div className="flex justify-center items-center p-3">
                 <Image src={logo} width={150} height={50} alt='Association Assalam'/>    
             </div>  
-            <div className="flex justify-between items-start p-3 flex-row w-3/4">
-                <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="grid p-3 md:grid-cols-3 grid-cols-2 w-3/4">
+                <div className="flex flex-col gap-2 justify-center items-center mx-auto">
                     <h6 className="font-bold pb-2">Pages</h6>
                     <Link href='/'><p className="hover:underline">Accueil</p></Link>
                     <Link href='/nous_sommes'><p className="hover:underline">Nous Sommes</p></Link>
@@ -25,7 +25,7 @@ function Footer(){
                     <p>tel : +33 612 234 567</p>
                     <p>Adresse : 12 rue de la Légion d'Honneur, Paris, 75009</p>
                 </div>
-                <div className="flex flex-col gap-1 justify-center">
+                <div className="flex flex-col gap-1 justify-center mx-auto items-center md:col-span-1 col-span-full">
                     <h6 className="font-bold pb-2 text-center">Reseaux Sociaux</h6>
                     <div className="flex flex-row gap-2">
                         <Link href='#'><IoLogoFacebook className="w-8 h-8 hover:text-blue-500"/></Link>

@@ -146,3 +146,44 @@ export const BarData = [
     text: 'fondation'
   }
 ]
+
+export const screenData = [
+  "L'Institut de la Paix pour le Développement Social est une association marocaine non gouvernementale qui contribue à améliorer et à améliorer la vie des individus et des familles en situation difficile, afin de préserver leur dignité humaine à travers des programmes de développement durables, avec des engagements clairs et des ressources humaines qualifiées. L'institut s'appuie sur les valeurs de la compassion et de la solidarité, conformément aux normes de qualité et de professionnalisme, tout en visant l'excellence et le leadership",
+  "La dignité humaine et le développement de la société sont des valeurs fondamentales pour construire un avenir meilleur. La dignité de chaque individu doit être respectée, quels que soient ses origines ou sa situation sociale, car elle est le pilier de l'harmonie sociale. En parallèle, le développement communautaire repose sur la solidarité, l'accès équitable aux ressources et l'amélioration continue des conditions de vie. Ensemble, ces principes favorisent une société plus juste, plus inclusive et plus prospère.",
+  "Améliorer la situation des familles et des individus pour les intégrer dans l'environnement socio-économique .Créer, soutenir et encourager des projets et des programmes sociaux ayant une dimension de développement durable et environnemental .Mettre à jour les outils, développer les méthodes et les compétences pour activer et mettre en œuvre les programmes sociaux .Renforcer la culture du développement et l'approche participative, tout en sensibilisant la société .Plaider en faveur des groupes vivant dans la vulnérabilité sociale."
+]
+
+export const gridData = [
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  },
+  {
+    icon : <AiFillCalculator/>,
+    text : "hey"
+  }
+]
