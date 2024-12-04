@@ -28,11 +28,11 @@ const Navbar = () => {
             <li><Link href="/nous_sommes">Nous sommes</Link></li>
             <li><Link href='/actualites'>Actualités</Link></li>
             <li>
-              <Link href='/projects'>Projets</Link>
+              <Link href='/projets'>Projets</Link>
               <ul className="p-2">
-                <li><Link href='/project/1'>Submenu 1</Link></li>
-                <li><Link href='/project/2'>Submenu 2</Link></li>
-                <li><Link href='/project/3'>Submenu 3</Link></li>
+                <li><Link href='/projets/1'>Submenu 1</Link></li>
+                <li><Link href='/projets/2'>Submenu 2</Link></li>
+                <li><Link href='/projects/3'>Submenu 3</Link></li>
               </ul>
             </li>
             <li><Link href='/contact'>Contact</Link></li>
@@ -46,11 +46,11 @@ const Navbar = () => {
           <li><Link href="/actualites">Actualités</Link></li>
           <li>
             <details>
-              <summary><Link href='/projects'>Projects</Link></summary>
+              <summary><Link href='/projets'>Projects</Link></summary>
               <ul className="p-2 z-10">
-                <li><Link href='/projects/1'>Submenu 1</Link></li>
-                <li><Link href='/projects/2'>Submenu 2</Link></li>
-                <li><Link href='/projects/3'>Submenu 3</Link></li>
+                <li><Link href='/projets/1'>Submenu 1</Link></li>
+                <li><Link href='/projets/2'>Submenu 2</Link></li>
+                <li><Link href='/projets/3'>Submenu 3</Link></li>
               </ul>
             </details>
           </li>

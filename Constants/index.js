@@ -187,3 +187,58 @@ export const gridData = [
     text : "hey"
   }
 ]
+
+
+export const fondateursData = [
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  {
+    name : 'example',
+    photo : 'example',
+    description : 'example'
+  },
+  
+]

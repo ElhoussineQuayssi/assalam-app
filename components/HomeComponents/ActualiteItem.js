@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const ActualiteItem = ({title, description, image,key}) => {
+const ActualiteItem = ({title, description, image}) => {
   return (
     <div className={`bg-slate-200 gap-3 rounded-lg p-4 shadow-md flex flex-col justify-center items-center hover:transition-all duration-700 hover:-translate-y-2`}>
       <div className='flex-1'>

@@ -1,13 +1,14 @@
 // pages/nous-sommes.js
 "use client"
 import Navbar from '../../components/HomeComponents/Navbar';
+import Image from 'next/image'
 import Footer from '../../components/HomeComponents/Footer';
-import Image from 'next/image';
 import photo from '../../public/logo.png';
 import { useState } from 'react';
 import { Nmessage, Nbut, Nvision } from '@/components/NousSommesComponents/Screen'
-import { gridData } from '@/Constants';
+import { fondateursData, gridData } from '@/Constants';
 import { AiFillAlert } from 'react-icons/ai';
+import example from '../../public/example.jpg';
 
 const NousSommes = () => {
 
@@ -106,6 +107,21 @@ const NousSommes = () => {
               <h1 className='flex-1 text-xl text-center'>Hola Hola Hola Hola Hola Hola Hola Hola Hala</h1>
             </div>
           </div>
+      </div>
+      <div className='w-full h-screen flex flex-col items-center gap-14 p-6'>
+        <h1>Title</h1>
+        <div className="w-3/4 h-60 grid grid-col-2 md:grid-cols-5 gap-2 ">
+          {fondateursData.map((item,index) => {
+            return (
+              <div className="" key={index}>
+                <Image src={example} alt='image' width={200} height={200} />
+                <p>{item.name}</p>
+                <p>{item.description}</p>
+              </div>
+            )
+          }
+          )}
+        </div>
       </div>
       <Footer />
     </>
