@@ -1,4 +1,4 @@
-import { AiFillCalculator } from 'react-icons/ai'
+import { AiFillAlert, AiFillCalculator, AiFillWarning } from 'react-icons/ai'
 import { MdPeopleAlt } from 'react-icons/md'
 import { FiShare2 } from 'react-icons/fi'
 import { FaTools, FaProjectDiagram , FaArrowUp } from 'react-icons/fa'
@@ -74,6 +74,18 @@ export const ProjectsEx = [
     titre: 'Projet 3',
     description: 'description pour le projet 3',
     image: '#'
+  },{
+    titre: 'Projet 4',
+    description: 'description pour le projet 3',
+    image: '#'
+  },{
+    titre: 'Projet 5',
+    description: 'description pour le projet 3',
+    image: '#'
+  },{
+    titre: 'Projet 6',
+    description: 'description pour le projet 3',
+    image: '#'
   }
 ]
 
@@ -122,6 +134,23 @@ export const ActualitesData = [
     image: image
   }
 ]
+
+export const tawajohatona = [
+  {
+    icon : <AiFillWarning/>,
+    description : 'hola'
+  },{
+    icon : <AiFillWarning/>,
+    description : 'hola'
+  },{
+    icon : <AiFillWarning/>,
+    description : 'hola'
+  },{
+    icon : <AiFillWarning/>,
+    description : 'hola'
+  }
+]
+
 
 export const BarData = [
   {
@@ -241,4 +270,112 @@ export const fondateursData = [
     description : 'example'
   },
   
+]
+
+export const P = [
+  "KAFALA","IMTIAZ","ORPHELINS","CEB","CDLFEE","PH","RA"
+]
+
+const section = [
+  'text-photo','photo-text','dropdown-photo','desc-graph','desc-list','button-screen','bar'
+]
+
+export const Projets = [
+  {
+    name : 'IMTIAZ',
+    slogan : "Parrainage des etudiants brilliants",
+    description : "Le projet Imtiaz a pour mission d’accompagner les étudiants les plus brillants vivanten situation difficile ou issus de milieux défavorisés de manière générale jusqu’à leurinsertion professionnelle",
+    photo : '',
+    section : [
+      {
+        type : 'bar',
+        content : "L’objectif principal étant d’insuffler un esprit d'appartenance et d'initiative en lui ouelle et les activer dans la réforme et le développement. ",
+        slogan : "Nous visons à travers les différentes formations du projet d’élaborer le leader dedemain : Un leader missionnaire engagé avec une bonne moralité, l'excellenceacadémique, une bonne santé et une efficacité au sein de la famille et de la société"
+      },
+      {
+        type : 'text-image',
+        titre : 'Objectifs spécifiques',
+        description : ""
+      }
+    ],
+    colorText : 'text-slate-700',
+    colorBg :  'bg-slate-100'
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },{
+    name : '',
+    description : '',
+    photo : '',
+    section : [
+      {
+        
+      }
+    ],
+    colorText : '',
+    colorBg :  ''
+  },
 ]

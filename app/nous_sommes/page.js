@@ -6,9 +6,10 @@ import Footer from '../../components/HomeComponents/Footer';
 import photo from '../../public/logo.png';
 import { useState } from 'react';
 import { Nmessage, Nbut, Nvision } from '@/components/NousSommesComponents/Screen'
-import { fondateursData, gridData } from '@/Constants';
+import { fondateursData, gridData, tawajohatona } from '@/Constants';
 import { AiFillAlert } from 'react-icons/ai';
 import example from '../../public/example.jpg';
+import Card from '@/components/HomeComponents/Card';
 
 const NousSommes = () => {
 
@@ -81,39 +82,21 @@ const NousSommes = () => {
       </div>
       <div className='p-10 bg-green-400 flex flex-col justify-center items-center gap-10 '>
           <h1 className='text-bold text-3xl'>tawajohatona al istratijiya</h1>
-          <div className='flex flex-row justify-center items-center h-60'>
-            <div className='flex-1 hover:translate-y-2 transition-all duration-500 m-2 border-4 border-blue-600 flex flex-col justify-center items-center h-full bg-blue-300'>
-              <div className='flex-1 flex justify-center items-center'>
-                <AiFillAlert className='w-12 h-12'/>
-              </div>
-              <h1 className='flex-1 text-xl text-center'>Hola Hola Hola Hola Hola Hola Hola Hola Hala</h1>
-            </div>
-            <div className='hover:translate-y-2 transition-all duration-500 flex-1 m-2 border-4 border-blue-600 flex flex-col justify-center items-center h-full bg-blue-300'>
-              <div className='flex-1 flex justify-center items-center'>
-                <AiFillAlert className='w-12 h-12'/>
-              </div>
-              <h1 className='flex-1 text-xl text-center'>Hola Hola Hola Hola Hola Hola Hola Hola Hala</h1>
-            </div>
-            <div className='flex-1 hover:translate-y-2 transition-all duration-500 m-2 flex flex-col justify-center items-center h-full bg-blue-300 border-4 border-blue-600'>
-              <div className='flex-1 flex justify-center items-center'>
-                <AiFillAlert className='w-12 h-12'/>
-              </div>
-              <h1 className='flex-1 text-xl text-center'>Hola Hola Hola Hola Hola Hola Hola Hola Hala</h1>
-            </div>
-            <div className='hover:translate-y-2 transition-all duration-500 flex-1 m-2 flex flex-col justify-center items-center h-full bg-blue-300  border-4 border-blue-600'>
-              <div className='flex-1 flex justify-center items-center'>
-                <AiFillAlert className='w-12 h-12'/>
-              </div>
-              <h1 className='flex-1 text-xl text-center'>Hola Hola Hola Hola Hola Hola Hola Hola Hala</h1>
-            </div>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-12 items-center md:h-60 h-full w-full'>
+            {tawajohatona.map((item,index) => {
+              return(
+                <Card icon={item.icon} description={item.description} key={index} />
+              )
+            }
+            )}
           </div>
       </div>
-      <div className='w-full h-screen flex flex-col items-center gap-14 p-6'>
+      <div className='w-full h-full flex flex-col items-center gap-14 p-6'>
         <h1>Title</h1>
-        <div className="w-3/4 h-60 grid grid-col-2 md:grid-cols-5 gap-2 ">
+        <div className="w-full h-full grid grid-cols-4 md:grid-cols-5 gap-2">
           {fondateursData.map((item,index) => {
             return (
-              <div className="" key={index}>
+              <div className={`justify-center items-center flex flex-col`} key={index}>
                 <Image src={example} alt='image' width={200} height={200} />
                 <p>{item.name}</p>
                 <p>{item.description}</p>

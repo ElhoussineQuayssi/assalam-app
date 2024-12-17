@@ -1,7 +1,7 @@
 import Card from "@/components/HomeComponents/Card";
 import Footer from "@/components/HomeComponents/Footer";
 import Navbar from "@/components/HomeComponents/Navbar";
-import ProjectCard from "@/components/HomeComponents/ProjectCard";
+import ProjectSection from "@/components/HomeComponents/ProjectSection";
 
 export default function page(){
     return(
@@ -16,9 +16,7 @@ export default function page(){
                     <p className="text-slate-500 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, maiores veniam. Vitae eum ipsum, aperiam vero facilis blanditiis tenetur, maxime, suscipit ullam velit necessitatibus. Saepe, cum consequuntur! Deleniti, nam amet!</p>
                 </div>
                 <div className="flex flex-auto flex-row justify-center items-center h-60 w-4/5 gap-2"> 
-                    <ProjectCard/>
-                    <ProjectCard/>
-                    <ProjectCard/>
+                   <ProjectSection/>
                 </div>
             </div>
             <Footer/>

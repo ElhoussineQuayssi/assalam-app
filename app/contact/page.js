@@ -61,7 +61,6 @@ export default function Contact() {
                 required
               />
             </div>
-
             <div className="mb-6">
               <label htmlFor="message" className="block text-sm font-medium text-gray-600">Votre Message</label>
               <textarea
