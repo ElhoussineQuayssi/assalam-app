@@ -1,107 +1,112 @@
-"use client"
-
-import Footer from '@/components/HomeComponents/Footer';
+"use client"; // Required for client-side interactivity (e.g., animations, forms)
+import React from 'react';
+import emailjs from 'emailjs-com';
 import Navbar from '@/components/HomeComponents/Navbar';
-import { useState } from 'react';
+import Footer from '@/components/HomeComponents/Footer';
+import { motion } from 'framer-motion';
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'; // Import icons from react-icons
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
+export default function Page() {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Here you can handle form submission logic (e.g., sending it to an API)
-    alert('Form submitted!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.sendForm(
+      'service_tmz1uwe', // Replace with your EmailJS service ID
+      'template_da817bm', // Replace with your EmailJS template ID
+      e.target,
+      'kqHtjYA7blA1A6YQh' // Replace with your EmailJS user ID
+    )
+      .then((result) => {
+          alert('Message sent successfully!');
+      }, (error) => {
+          alert('An error occurred, please try again.');
+      });
   };
 
   return (
-    <>
-      <Navbar/>
-      <div className="min-h-screen flex flex-row justify-center items-center bg-gray-100 gap-10">
-        <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg flex-1">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+    <div>
+      <Navbar />
+      {/* Section de titre avec animation */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className='flex flex-col justify-center items-center text-center p-6 h-40 w-full font-bold text-2xl bg-blue-500 text-white'
+      >
+        Écrivez-Nous : Ensemble, Tout Est Possible
+      </motion.div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-600">Nom complet</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                placeholder="Votre Nom"
-                required
-              />
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                placeholder="Votre Email"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-600">Votre Message</label>
-              <textarea
-                name="message"
-                id="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                rows="5"
-                placeholder="Votre Message"
-                required
-              ></textarea>
-            </div>
-
+      {/* Section de contact avec animation */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col md:flex-row justify-between p-6 max-w-6xl mx-auto gap-8"
+      >
+        {/* Formulaire de contact */}
+        <div className="w-full md:w-1/2 p-8 bg-white rounded-lg shadow-lg">
+          <h2 className="text-3xl font-bold mb-6 text-blue-500 font-serif">Contactez-Nous</h2>
+          <form onSubmit={sendEmail} className="space-y-6">
+            <input
+              type="text"
+              name="name"
+              placeholder="Votre Nom"
+              className="input input-bordered w-full bg-gray-100 focus:bg-white focus:border-blue-500"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Votre Email"
+              className="input input-bordered w-full bg-gray-100 focus:bg-white focus:border-blue-500"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Votre Message"
+              className="textarea textarea-bordered h-48 w-full bg-gray-100 focus:bg-white focus:border-blue-500"
+              required
+            ></textarea>
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+              className="btn bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
             >
-              Confirmer
+              Envoyer le Message
             </button>
           </form>
         </div>
-        <div className='flex-1 max-w-md h-full flex flex-col border border-slate-300 bg-slate-50'>
-          <div className='p-4 text-center'>
-            <h2 className='text-3xl font-bold text-center text-gray-800 '>Contact Info</h2>
+
+        {/* Informations de contact */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="w-full md:w-1/2 p-8 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center text-center"
+        >
+          <h2 className="text-3xl font-bold mb-6 text-blue-500 font-serif">Nos Coordonnées</h2>
+          <div className="space-y-4 text-gray-700 w-full">
+            {/* Email */}
+            <div className="flex items-start gap-2 font-bold justify-center">
+              <MdEmail className="h-6 w-6 text-blue-500" />
+              <span>Email : assalam@mail.com</span>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-start gap-2 font-bold justify-center">
+              <MdPhone className="h-6 w-6 text-blue-500" />
+              <span>Téléphone : 02 345 6789</span>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-start gap-2 font-bold justify-center">
+              <MdLocationOn className="h-6 w-6 text-blue-500" />
+              <span>Adresse : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </div>
           </div>
-          <div className='p-4 text-center'>
-            <h1 className='font-bold underline'>Telephone</h1>
-            <p>0614324565</p>
-          </div>
-          <div className='p-4 text-center'>
-            <h1 className='font-bold underline'>Email</h1>
-            <p>contact@assalam.com</p>
-          </div>
-          <div className='p-4 text-center'>
-            <h1 className='font-bold underline'>Address</h1>
-            <p>Rue de la Paix, 1234 Paris, France</p>
-          </div>
-        </div>
-      </div>
-      <Footer/>
-    </>
+        </motion.div>
+      </motion.div>
+
+      <Footer />
+    </div>
   );
 }

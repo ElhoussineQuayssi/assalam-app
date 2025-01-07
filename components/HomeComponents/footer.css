@@ -1,0 +1,14 @@
+.div{
+    display: flex;
+    flex-direction:column;
+    gap: 0.5rem;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0.5rem;
+}
+
+.div:hover{
+    border-left-width: 5px;
+    border-left-style:border;
+    border-left-color:black;
+}

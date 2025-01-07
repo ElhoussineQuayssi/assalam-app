@@ -1,48 +1,68 @@
-import Image from "next/image"
-import logo from '../Assets/logo.png'
-import Link from "next/link"
-import { IoLogoFacebook ,IoLogoInstagram ,IoLogoTwitter ,IoLogoYoutube } from "react-icons/io";
+import Image from "next/image";
+import logo from '../Assets/logo.png';
+import Link from "next/link";
+import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io";
 
+function Footer() {
+  return (
+    <footer className="footer p-10 bg-base-200 text-base-content flex flex-col min-h-[400px]">
+      {/* Section du logo et description */}
+      <div className="flex flex-col items-center justify-center w-full mb-8">
+        <Image src={logo} width={150} height={50} alt="Association Assalam" className="mb-4" />
+        <p className="text-center text-xl font-serif">
+          Association Assalam - Agissons ensemble pour un monde meilleur.
+        </p>
+      </div>
 
-function Footer(){
-    return(
-        <footer className='footer bg-slate-300 h-fit w-full flex flex-col justify-center items-center'>
-            <div className="flex justify-center items-center p-3">
-                <Image src={logo} width={150} height={50} alt='Association Assalam'/>    
-            </div>  
-            <div className="grid p-3 md:grid-cols-3 grid-cols-2 w-3/4">
-                <div className="flex flex-col gap-2 justify-center items-center mx-auto">
-                    <h6 className="font-bold pb-2">Pages</h6>
-                    <Link href='/'><p className="hover:underline">Accueil</p></Link>
-                    <Link href='/nous_sommes'><p className="hover:underline">Nous Sommes</p></Link>
-                    <Link href='/projects'><p className="hover:underline">Projets</p></Link>
-                    <Link href='/Actualites'><p className="hover:underline">Actualités</p></Link>
-                    <Link href='/contact'><p className="hover:underline">Contact</p></Link>
-                </div>
-                <div className="flex flex-col gap-1 justify-center items-center">
-                    <h6 className="font-bold pb-2 text-center">Contact</h6>
-                    <p>Mail : Assalam@mail.com</p>
-                    <p>tel : +33 612 234 567</p>
-                    <p>Adresse : 12 rue de la Légion d'Honneur, Paris, 75009</p>
-                </div>
-                <div className="flex flex-col gap-1 justify-center mx-auto items-center md:col-span-1 col-span-full">
-                    <h6 className="font-bold pb-2 text-center">Reseaux Sociaux</h6>
-                    <div className="flex flex-row gap-2">
-                        <Link href='#'><IoLogoFacebook className="w-8 h-8 hover:text-blue-500"/></Link>
-                        <Link href='#'><IoLogoInstagram className="w-8 h-8 hover:text-pink-500" /></Link>
-                        <Link href='#'><IoLogoTwitter className="w-8 h-8 hover:text-cyan-300"/></Link>
-                        <Link href='#'><IoLogoYoutube className="w-8 h-8 hover:text-red-600"/></Link>
-                    </div>
-                </div>
-            </div>  
-            <div className="h-16 bg-slate-600 text-white w-full flex flex-row justify-around items-center">
-                <p>Designed by Quayssi</p>
-                <div className="divider text-swhite"></div>
-                <p>Copyright © 2024 Assalam</p>
-            </div>  
-        </footer>
-    )
+      {/* Sections de liens, contact et réseaux sociaux */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto px-4">
+        {/* Section des pages */}
+        <div className="flex w-full flex-col items-center md:items-start">
+          <h6 className="footer-title text-xl font-bold mb-4 font-serif">Pages</h6>
+          <Link href="/" className="link link-hover text-lg">Accueil</Link>
+          <Link href="/nous_sommes" className="link link-hover text-lg">Nous Sommes</Link>
+          <Link href="/projects" className="link link-hover text-lg">Projets</Link>
+          <Link href="/Actualites" className="link link-hover text-lg">Actualités</Link>
+          <Link href="/contact" className="link link-hover text-lg">Contact</Link>
+        </div>
+
+        {/* Section de contact */}
+        <div className="flex w-full flex-col items-center md:items-start">
+          <h6 className="footer-title text-xl font-bold mb-4 font-serif">Contact</h6>
+          <p className="text-lg"><span className="font-semibold">Mail</span> : Assalam@mail.com</p>
+          <p className="text-lg"><span className="font-semibold">Tel</span> : +33 612 234 567</p>
+          <p className="text-lg"><span className="font-semibold">Adresse</span> : 12 rue de la Légion d'Honneur, Paris, 75009</p>
+        </div>
+
+        {/* Section des réseaux sociaux */}
+        <div className="flex flex-col items-center md:items-start">
+          <h6 className="footer-title text-xl font-bold mb-4 font-serif">Réseaux Sociaux</h6>
+          <div className="flex gap-4">
+            <Link href="#" className="btn btn-ghost btn-circle">
+              <IoLogoFacebook className="w-8 h-8" />
+            </Link>
+            <Link href="#" className="btn btn-ghost btn-circle">
+              <IoLogoInstagram className="w-8 h-8" />
+            </Link>
+            <Link href="#" className="btn btn-ghost btn-circle">
+              <IoLogoTwitter className="w-8 h-8" />
+            </Link>
+            <Link href="#" className="btn btn-ghost btn-circle">
+              <IoLogoYoutube className="w-8 h-8" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Section du copyright en bas */}
+      <div className="mt-auto w-full bg-base-300 py-4">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+          <p className="text-lg font-serif">Designed by Quayssi</p>
+          <p className="text-lg font-serif">Copyright © 2024 Assalam. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-
-export default Footer
+export default Footer;

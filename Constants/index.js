@@ -3,6 +3,14 @@ import { MdPeopleAlt } from 'react-icons/md'
 import { FiShare2 } from 'react-icons/fi'
 import { FaTools, FaProjectDiagram , FaArrowUp } from 'react-icons/fa'
 import { RiCommunityLine } from 'react-icons/ri'
+import creativite from '@/public/creativite.png'
+import donner from '@/public/Donner.jpeg'
+import deux from '@/public/deux.png'
+import dieu from '@/public/Dieu.png'
+import handshake from '@/public/handshake.jpeg'
+import excellence from '@/public/Excellence.png'
+import support from '@/public/support.png'
+import equipe from '@/public/Equipe.png'
 
 
 
@@ -65,27 +73,35 @@ export const ProjectsEx = [
   {
     titre: 'Projet 1',
     description: 'description pour le projet 1',
-    image: '#'
+    image: T1
   },{
     titre: 'Projet 2',
     description: 'description pour le projet 2',
-    image: '#'
+    image: T1
   },{
     titre: 'Projet 3',
     description: 'description pour le projet 3',
-    image: '#'
+    image: T1
   },{
     titre: 'Projet 4',
     description: 'description pour le projet 3',
-    image: '#'
+    image: T1
   },{
     titre: 'Projet 5',
     description: 'description pour le projet 3',
-    image: '#'
+    image: T1
   },{
     titre: 'Projet 6',
     description: 'description pour le projet 3',
-    image: '#'
+    image: T1
+  },{
+    titre : 'projet 7',
+    description : 'description pour le projet 3',
+    image : T1
+  },{
+    titre : 'projet 8',
+    description : 'description pour le projet 3',
+    image : T1
   }
 ]
 
@@ -135,19 +151,24 @@ export const ActualitesData = [
   }
 ]
 
+import T1 from '@/public/T1.png'
+import T2 from '@/public/T2.png'
+import T3 from '@/public/T3.png'
+import T4 from '@/public/T4.png'
+
 export const tawajohatona = [
   {
-    icon : <AiFillWarning/>,
-    description : 'hola'
+    icon : T1,
+    description : 'Travailler sur des programmes et des projets sociaux ayant un impact positif sur les bénéficiaires'
   },{
-    icon : <AiFillWarning/>,
-    description : 'hola'
+    icon : T2,
+    description : "Établir les règles de gouvernance, de gestion administrative et financière de l'association"
   },{
-    icon : <AiFillWarning/>,
-    description : 'hola'
+    icon : T3,
+    description : "Renforcer les mécanismes de communication et promouvoir l’image et les produits de l’association"
   },{
-    icon : <AiFillWarning/>,
-    description : 'hola'
+    icon : T4,
+    description : "Développer et qualifier les ressources humaines quantitativement et qualitativement"
   }
 ]
 
@@ -184,90 +205,111 @@ export const screenData = [
 
 export const gridData = [
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : creativite,
+    text : "créativité"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : donner,
+    text : "don"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : excellence,
+    text : "l'excellence"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : dieu,
+    text : "La sincérité du travail pour Allah, le Tout-Puissant."
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : equipe,
+    text : "engagement"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : deux,
+    text : "confiance"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : support,
+    text : "professionnelle"
   },
   {
-    icon : <AiFillCalculator/>,
-    text : "hey"
+    icon : handshake,
+    text : "partenariat"
   }
 ]
 
 
+
+import F1 from "@/public/fondateurs/F1.jpeg"
+import F2 from "@/public/fondateurs/F2.jpeg"
+import F3 from "@/public/fondateurs/F3.jpeg"
+import F4 from "@/public/fondateurs/F3.jpeg"//
+import F5 from "@/public/fondateurs/F5.jpeg"
+import F6 from "@/public/fondateurs/F6.jpeg"
+import F7 from "@/public/fondateurs/F6.jpeg"//
+import F8 from "@/public/fondateurs/F8.jpeg"
+import F9 from "@/public/fondateurs/F11.jpeg"
+import F10 from "@/public/fondateurs/F11.jpeg"
+import F11 from "@/public/fondateurs/F11.jpeg"
+import F12 from "@/public/fondateurs/F12.jpeg"
 export const fondateursData = [
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Noureddine Orini',
+    photo : F1,
+    description : 'Directeur adjoint des finances et des affaires immobilières'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Moubarak Kjoout',
+    photo : F2,
+    description : 'Directeur des Finances et des Affaires Immobilières'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Karim Hamidouch',
+    photo : F3,
+    description : 'Directeur adjoint des affaires administratives'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Jamal Grundy',
+    photo : F4,
+    description : 'Directeur des affaires administratives'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Laila Fajah',
+    photo : F5,
+    description : "Vice-président en charge du suivi, de la planification et de l'audit"
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Ibrahim tiloua',
+    photo : F6,
+    description : 'Président national'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Noureddine Benhiba',
+    photo : F7,
+    description : 'Directeur adjoint du secteur du développement social'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Abdallah Aboutan',
+    photo : F8,
+    description : 'Directeur du secteur du développement social'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Abdel-Aali Al-Wadghiri',
+    photo : F9 ,
+    description : 'Directeur adjoint du secteur des services de soins et de secours'
   },
   {
-    name : 'example',
-    photo : 'example',
-    description : 'example'
+    name : 'Abdul Latif Rushdi',
+    photo : F10,
+    description : 'Directeur du secteur des services de bien-être et de secours'
+  },{
+    name : 'Amin Tawfiq',
+    photo : F11,
+    description : 'Responsable Communication Sociale et Marketing'
+  },{
+    name : 'Rachida Badrakhan',
+    photo : F12,
+    description : 'Directrice de la formation et du développement des ressources humaines'
   },
   
 ]
@@ -295,7 +337,10 @@ export const Projets = [
       {
         type : 'text-image',
         titre : 'Objectifs spécifiques',
-        description : ""
+        description : "lorem",
+        image : 'image',
+      },{
+        type : ''
       }
     ],
     colorText : 'text-slate-700',
