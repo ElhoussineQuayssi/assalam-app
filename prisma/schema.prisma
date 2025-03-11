@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model admins {
+  id           Int          @id @default(autoincrement())
+  username     String       @unique(map: "sqlite_autoindex_admins_1")
+  passwordHash String
+  email        String       @unique(map: "sqlite_autoindex_admins_2")
+  role         String
+  lastLogin    DateTime?
+  blog_posts   blog_posts[]
+}
+
+model blog_posts {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String
+  imageUrl  String?
+  adminId   Int?
+  createdAt DateTime? @default(now())
+  admins    admins?   @relation(fields: [adminId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
